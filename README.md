@@ -18,7 +18,13 @@ Se creara un archivo de configuracion de typescript
 ```
 "rootDir": "./src"
 ```
-3. Para compilar
+3. Si solo se desea que se compilen los archivos de la carpeta **src**
+
+Incluir al final de json
+```
+"include":["src"]
+```
+4. Para compilar
 ```
 tsc
 ```
