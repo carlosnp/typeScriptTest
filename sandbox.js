@@ -69,3 +69,18 @@ console.log('obj1', obj1);
 var obj2;
 obj2 = { name: 'Gillian Donnelly', age: 93, color: 'Research' };
 console.log('obj2', obj2);
+// any Type
+var num = 26;
+console.log('num', num);
+num = 'Associate';
+console.log('num', num);
+var mixedAny = [];
+mixedAny.push('Zulauf');
+mixedAny.push('429-968-6467');
+mixedAny.push(3);
+mixedAny.push(['Tom Bednar', 'Klein']);
+mixedAny.push({ name: 'Lela Senger PhD' });
+console.log('mixed all', mixedAny);
+var objAny;
+objAny = { name: true, age: { name: '382-187-5004' } };
+console.log('any obj', objAny);

@@ -91,3 +91,21 @@ let obj2:{
 
 obj2={name:'Gillian Donnelly', age:93,color:'Research'}
 console.log('obj2', obj2);
+
+// any Type
+let num:any = 26;
+console.log('num', num);
+num='Associate'
+console.log('num', num);
+
+let mixedAny:any[]=[];
+mixedAny.push('Zulauf')
+mixedAny.push('429-968-6467')
+mixedAny.push(3)
+mixedAny.push(['Tom Bednar','Klein'])
+mixedAny.push({name:'Lela Senger PhD'})
+console.log('mixed all',mixedAny);
+
+let objAny:{name:any,age:any}
+objAny = {name:true, age:{name:'382-187-5004'}}
+console.log('any obj', objAny);
