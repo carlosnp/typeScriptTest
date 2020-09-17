@@ -1,3 +1,9 @@
+:root {
+  --h1-color:#1f3077;
+  --li-color:#314dbd;
+  --btn-color:#4769f3;
+}
+
 body{
   margin: 0;
   font-family: Roboto; 
@@ -8,7 +14,7 @@ body{
 }
 h1{
   margin: 40px auto;
-  color: #ff0aa7;
+  color: var(--h1-color);
   text-align: center;
 }
 ul{
@@ -21,7 +27,7 @@ li{
   margin: 10px auto;
 }
 li h4{
-  color: #ff0aa7;
+  color: var(--li-color);
   margin: 0;
   text-transform: capitalize;
 }
@@ -58,7 +64,7 @@ input, select{
 button{
   color: white;
   border: 0;
-  background: #ff0aa7;
+  background: var(--btn-color);
   padding: 6px;
   min-width: 80px;
   border-radius: 4px;

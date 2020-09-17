@@ -1,9 +1,21 @@
-const character = 'mario';
+/*
+* No se puede cambiar el tipo de variable
+*/
 
-console.log(character);
+let character = 'mario';
+let age = 36;
+let isSome = true;
 
-const inputs = document.querySelectorAll('input');
+console.log(character, age, isSome);
 
-inputs.forEach(input => {
-  console.log(input);
-});
+/* 
+ const inputs = document.querySelectorAll('input');
+ inputs.forEach(input => {
+   console.log(input);
+ });
+ */ 
+
+ const circ = (diameter:number)=>{
+   return diameter * Math.PI;
+ }
+ console.log(`Circ= ${circ(3)}`);
