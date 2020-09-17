@@ -1,3 +1,13 @@
+const ColorsLog1 = [
+  "background: #d8d7d7",
+  "color: blue",
+  "display: block",
+  "text-align: center",
+  "font-size:14px",
+  "padding:10px",
+].join(";");
+
+console.log(`%c Types of VAR`,ColorsLog1);
 /*
 * 1) No se puede cambiar el tipo de variable
 * 2) Una vez definida un objeto no se le pueden agregar propiedades
