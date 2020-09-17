@@ -11,7 +11,15 @@ var greet;
 greet = function () {
     console.log('hello word!');
 };
+var addPrint = function (a, b) {
+    console.log('add void', a + b);
+};
 var add = function (a, b) {
     return a + b;
 };
-console.log(add(1, 3));
+var subtract = function (a, b) {
+    return a - b;
+};
+addPrint(100, 30);
+console.log('add', add(1, 3));
+console.log('subtract', subtract(10, 3));

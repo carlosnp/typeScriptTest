@@ -14,7 +14,17 @@ greet =()=>{
   console.log('hello word!');
 }
 
-const add = (a:number,b:number)=>{
+const addPrint = (a:number,b:number):void=>{
+  console.log('add void',a+b);
+}
+
+const add = (a:number,b:number):number=>{
   return a+b;
 }
-console.log(add(1,3));
+const subtract = (a:number,b:number):number => {
+  return a - b;
+};
+
+addPrint(100,30)
+console.log('add',add(1, 3));
+console.log('subtract',subtract(10, 3));
