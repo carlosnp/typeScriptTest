@@ -23,3 +23,11 @@ var subtract = function (a, b) {
 addPrint(100, 30);
 console.log('add', add(1, 3));
 console.log('subtract', subtract(10, 3));
+var logDetail = function (uid, item) {
+    console.log(item + " tiene un uid de " + uid);
+};
+var greetAlias = function (user) {
+    console.log(user.name + " tiene un uid de " + user.uid);
+};
+logDetail(3, 'hola');
+greetAlias({ name: 'Anita', uid: 36 });
