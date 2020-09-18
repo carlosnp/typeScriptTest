@@ -31,3 +31,15 @@ var greetAlias = function (user) {
 };
 logDetail(3, 'hola');
 greetAlias({ name: 'Anita', uid: 36 });
+// Signatures
+var calc;
+calc = function (x, y, action) {
+    if (action == 'add') {
+        return x + y;
+    }
+    else {
+        return x - y;
+    }
+};
+console.log('calc', calc(1, 2, 'add'));
+console.log('calc', calc(10, 2, ''));

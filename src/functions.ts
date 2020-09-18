@@ -43,3 +43,17 @@ const greetAlias = (user:objWhithName)=>{
 
 logDetail(3,'hola')
 greetAlias({name:'Anita',uid:36})
+
+// Signatures
+
+let calc: (a:number, b:number, c:string)=>number;
+
+calc = (x:number, y:number, action:string)=>{
+  if (action == 'add') {
+    return x + y;
+  } else {
+    return x - y;
+  }
+}
+console.log('calc', calc(1,2,'add'));
+console.log('calc', calc(10,2,''));
