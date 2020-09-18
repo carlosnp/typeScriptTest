@@ -5,4 +5,5 @@ if (anchor) {
     console.log('anchor', anchor);
 }
 var form = document.querySelector('#new-item-form');
-console.log('form', form.children);
+console.log('item-form', form.children);
+//# sourceMappingURL=app.js.map
