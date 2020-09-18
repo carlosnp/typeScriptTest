@@ -95,4 +95,3 @@ console.log('mixed all', mixedAny);
 var objAny;
 objAny = { name: true, age: { name: '382-187-5004' } };
 console.log('any obj', objAny);
-//# sourceMappingURL=sandbox.js.map

@@ -43,4 +43,3 @@ calc = function (x, y, action) {
 };
 console.log('calc', calc(1, 2, 'add'));
 console.log('calc', calc(10, 2, ''));
-//# sourceMappingURL=functions.js.map
