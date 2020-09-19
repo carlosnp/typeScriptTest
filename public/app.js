@@ -12,5 +12,6 @@ var details = document.querySelector('#details');
 var amount = document.querySelector('#amount');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log("type: " + type.value + " \ntofrom: " + tofrom.value + " \ndetails: " + details.value + " \namount: " + amount.value);
+    console.log("type: " + type.value + " \ntofrom: " + tofrom.value + " \ndetails: " + details.value + " \namount: " + amount.valueAsNumber);
+    console.log(amount.valueAsNumber);
 });

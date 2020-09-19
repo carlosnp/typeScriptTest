@@ -1,0 +1,22 @@
+{
+  "name": "typescript_test",
+  "version": "1.0.0",
+  "description": "curso de typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosnp/typeScriptTest.git"
+  },
+  "author": "Cnava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosnp/typeScriptTest/issues"
+  },
+  "homepage": "https://github.com/carlosnp/typeScriptTest#readme",
+  "dependencies": {
+    "typescript": "^4.0.3"
+  }
+}
