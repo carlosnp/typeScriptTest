@@ -1,6 +1,7 @@
 import { Invoice } from './modules/Invoice.js'
 import { Payments } from './modules/Payments.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
+import { ListTemplate } from './modules/ListTemplate.js';
 
 const ColorsLog2 = [
   "background: #d8d7d7",
@@ -24,6 +25,10 @@ const type    = document.querySelector('#type') as HTMLSelectElement;
 const tofrom  = document.querySelector('#tofrom') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
 const amount  = document.querySelector('#amount') as HTMLInputElement;
+// instancia lista
+const ul      = document.querySelector('ul')!;
+const list    = new ListTemplate(ul);
+
 
 const IsNumber = (a:number):number => {
   if(isNaN(a)){
@@ -42,6 +47,6 @@ form.addEventListener('submit',(e:Event)=>{
   } else {
     doc = new Payments(tofrom.value, details.value, num);
   }
-  console.log('docs', doc);
-  
+  list.render(doc, type.value, 'end');
+
 })
