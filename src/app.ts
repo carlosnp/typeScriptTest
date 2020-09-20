@@ -21,24 +21,7 @@ form.addEventListener('submit',(e:Event)=>{
 })
 
 // Clases
-class Invoice {
-  // client:string;
-  // details:string;
-  // amount:number;
-  constructor(
-    // Solo lectura
-    readonly client:string,
-    // Solo se puede modificar o imprimir dentro de la funcion
-    private details:string,
-    // La misma de siempre(puede hacer lo que sea)
-    public amount:number
-  ) 
-  {}
-  format(){
-    return `${this.client} tiene ${this.amount}$ para ${this.details}`
-  }
-}
-
+import { Invoice } from './modules/invoice.js'
 const invOne = new Invoice('Devante Farrell','Non aut dolorem libero veritatis harum quo tempore aut.',250)
 const invTwo = new Invoice('Kacey Hagenes I','Dolor odio ut suscipit qui vel.',350)
 
