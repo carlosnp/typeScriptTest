@@ -49,5 +49,6 @@ arr[0] = false;
 arr[1] = 'eos';
 arr[2] = 11760;
 console.log('arr after', arr);
+// Las tuplas no permiten cambiar el tipo de elemento de una posicion
 let tupla = ['solid state', 58698, false];
 console.log('tupla', tupla);

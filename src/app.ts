@@ -42,10 +42,16 @@ form.addEventListener('submit',(e:Event)=>{
   e.preventDefault();
   let num = IsNumber(amount.valueAsNumber);
   let doc: HasFormatter;
+  let values:[string,string, number]
+  values = [
+    tofrom.value,
+    details.value,
+    num
+  ];
   if (type.value == 'invoice') {
-    doc = new Invoice(tofrom.value, details.value, num);
+    doc = new Invoice(...values);
   } else {
-    doc = new Payments(tofrom.value, details.value, num);
+    doc = new Payments(...values);
   }
   list.render(doc, type.value, 'end');
 
