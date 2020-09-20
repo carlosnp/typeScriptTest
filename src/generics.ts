@@ -11,15 +11,20 @@ let docOne = addUID({
 console.log(docOne);
 console.log(docOne.uid);
 
+// Enums
+enum ResourceType {BOOK, AUTHOR, FILM, DIRECTION, PERSON}
+
 interface Resourse <T> {
   uid:number,
   resourseName:string,
+  ResourceType:ResourceType,
   data:T,
 }
 
 const docThree: Resourse<object>={
   uid:62397,
   resourseName: 'Wayne Goldner',
+  ResourceType: ResourceType.BOOK,
   data:{
     name:'Mr. Letitia Lockman',
     job:'Internal Implementation Representative',
@@ -29,8 +34,9 @@ const docThree: Resourse<object>={
 }
 console.log('docThree',docThree);
 const docFour: Resourse<string[]>={
-  uid:62397,
+  uid:62398,
   resourseName: 'Wayne Goldner',
+  ResourceType: ResourceType.FILM,
   data:[
     '375cea32-900f-4450-aeec-4fc807b6465a',
     'image',

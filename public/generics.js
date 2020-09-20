@@ -10,9 +10,19 @@ let docOne = addUID({
 });
 console.log(docOne);
 console.log(docOne.uid);
+// Enums
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["AUTHOR"] = 1] = "AUTHOR";
+    ResourceType[ResourceType["FILM"] = 2] = "FILM";
+    ResourceType[ResourceType["DIRECTION"] = 3] = "DIRECTION";
+    ResourceType[ResourceType["PERSON"] = 4] = "PERSON";
+})(ResourceType || (ResourceType = {}));
 const docThree = {
     uid: 62397,
     resourseName: 'Wayne Goldner',
+    ResourceType: ResourceType.BOOK,
     data: {
         name: 'Mr. Letitia Lockman',
         job: 'Internal Implementation Representative',
@@ -22,8 +32,9 @@ const docThree = {
 };
 console.log('docThree', docThree);
 const docFour = {
-    uid: 62397,
+    uid: 62398,
     resourseName: 'Wayne Goldner',
+    ResourceType: ResourceType.FILM,
     data: [
         '375cea32-900f-4450-aeec-4fc807b6465a',
         'image',
