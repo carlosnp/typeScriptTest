@@ -17,10 +17,19 @@ form.addEventListener('submit', function (e) {
 });
 // Clases
 var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // client:string;
+    // details:string;
+    // amount:number;
+    function Invoice(
+    // Solo lectura
+    client, 
+    // Solo se puede modificar o imprimir dentro de la funcion
+    details, 
+    // La misma de siempre(puede hacer lo que sea)
+    amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
     }
     Invoice.prototype.format = function () {
         return this.client + " tiene " + this.amount + "$ para " + this.details;
@@ -29,11 +38,14 @@ var Invoice = /** @class */ (function () {
 }());
 var invOne = new Invoice('Devante Farrell', 'Non aut dolorem libero veritatis harum quo tempore aut.', 250);
 var invTwo = new Invoice('Kacey Hagenes I', 'Dolor odio ut suscipit qui vel.', 350);
-console.log(invOne);
-console.log(invTwo);
+// console.log(invOne);
+// console.log(invTwo);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-invOne.client = 'Kallie Dibbert';
-console.log(invOne);
-console.log('invoices', invoices);
+// invOne.client ='Kallie Dibbert'
+// console.log(invOne);
+// console.log('invoices',invoices);
+invoices.forEach(function (element) {
+    console.log(element.client + " \n" + element.amount + " \n " + element.format());
+});

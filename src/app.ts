@@ -22,14 +22,18 @@ form.addEventListener('submit',(e:Event)=>{
 
 // Clases
 class Invoice {
-  client:string;
-  details:string;
-  amount:number;
-  constructor(c:string,d:string,a:number) {
-    this.client = c;
-    this.details = d;
-    this.amount = a;
-  }
+  // client:string;
+  // details:string;
+  // amount:number;
+  constructor(
+    // Solo lectura
+    readonly client:string,
+    // Solo se puede modificar o imprimir dentro de la funcion
+    private details:string,
+    // La misma de siempre(puede hacer lo que sea)
+    public amount:number
+  ) 
+  {}
   format(){
     return `${this.client} tiene ${this.amount}$ para ${this.details}`
   }
@@ -38,14 +42,18 @@ class Invoice {
 const invOne = new Invoice('Devante Farrell','Non aut dolorem libero veritatis harum quo tempore aut.',250)
 const invTwo = new Invoice('Kacey Hagenes I','Dolor odio ut suscipit qui vel.',350)
 
-console.log(invOne);
-console.log(invTwo);
+// console.log(invOne);
+// console.log(invTwo);
 
 let invoices: Invoice[] = [];
 invoices.push(invOne);
 invoices.push(invTwo);
 
-invOne.client ='Kallie Dibbert'
-console.log(invOne);
+// invOne.client ='Kallie Dibbert'
+// console.log(invOne);
 
-console.log('invoices',invoices);
+// console.log('invoices',invoices);
+
+invoices.forEach(element => {
+  console.log(`${element.client} \n${element.amount} \n ${element.format()}`)
+});
