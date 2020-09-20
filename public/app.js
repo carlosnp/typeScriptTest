@@ -15,6 +15,7 @@ form.addEventListener('submit', (e) => {
     console.log(amount.valueAsNumber);
 });
 // Clases
+console.log(`%c Clases & Modulo`, ColorsLog2);
 import { Invoice } from './modules/invoice.js';
 const invOne = new Invoice('Devante Farrell', 'Non aut dolorem libero veritatis harum quo tempore aut.', 250);
 const invTwo = new Invoice('Kacey Hagenes I', 'Dolor odio ut suscipit qui vel.', 350);
@@ -29,3 +30,23 @@ invoices.push(invTwo);
 invoices.forEach(element => {
     console.log(`${element.client} \n${element.amount} \n ${element.format()}`);
 });
+/**
+ * Interfase
+ */
+console.log(`%c Interfase`, ColorsLog2);
+const me = {
+    name: 'Miss Rae Daniel',
+    age: 13,
+    speak(text) {
+        console.log('text', text);
+    },
+    spend(amount) {
+        console.log('Send', amount);
+        return amount;
+    }
+};
+console.log('me', me);
+const greetPerson = (person) => {
+    console.log('hola ', person.name);
+};
+greetPerson(me);
