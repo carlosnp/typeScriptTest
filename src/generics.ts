@@ -44,3 +44,17 @@ const docFour: Resourse<string[]>={
   ]
 }
 console.log('docFour', docFour);
+
+// Tuplas
+let arr = ['Home',95552,true];
+console.log('arr before', arr);
+
+arr[0]= false;
+arr[1]= 'eos';
+arr[2]=11760;
+console.log('arr after', arr);
+
+// Las tuplas no permiten cambiar el tipo de elemento de una posicion
+let tupla:[string,number,boolean]=['solid state',58698, false];
+console.log('tupla', tupla);
+

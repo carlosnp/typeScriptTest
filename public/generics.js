@@ -42,3 +42,12 @@ const docFour = {
     ]
 };
 console.log('docFour', docFour);
+// Tuplas
+let arr = ['Home', 95552, true];
+console.log('arr before', arr);
+arr[0] = false;
+arr[1] = 'eos';
+arr[2] = 11760;
+console.log('arr after', arr);
+let tupla = ['solid state', 58698, false];
+console.log('tupla', tupla);
