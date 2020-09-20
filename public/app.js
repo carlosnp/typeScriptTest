@@ -1,3 +1,5 @@
+import { Invoice } from './modules/Invoice.js';
+import { Payments } from './modules/Payments.js';
 console.log(`%c APP`, ColorsLog2);
 const anchor = document.querySelector('a');
 if (anchor) {
@@ -20,7 +22,12 @@ const IsNumber = (a) => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     let num = IsNumber(amount.valueAsNumber);
-    console.log(`type: ${type.value} \ntofrom: ${tofrom.value} \ndetails: ${details.value} \namount: ${num}`);
-    console.log(amount.valueAsNumber);
+    let doc;
+    if (type.value == 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, num);
+    }
+    else {
+        doc = new Payments(tofrom.value, details.value, num);
+    }
+    console.log('docs', doc);
 });
-export {};

@@ -28,5 +28,12 @@ const IsNumber = (a:number):number => {
 form.addEventListener('submit',(e:Event)=>{
   e.preventDefault();
   let num = IsNumber(amount.valueAsNumber);
-  console.log(`type: ${type.value} \ntofrom: ${tofrom.value} \ndetails: ${details.value} \namount: ${num}`);  
+  let doc: HasFormatter;
+  if (type.value == 'invoice') {
+    doc = new Invoice(tofrom.value, details.value, num);
+  } else {
+    doc = new Payments(tofrom.value, details.value, num);
+  }
+  console.log('docs', doc);
+  
 })
