@@ -2,6 +2,14 @@ import { Invoice } from './modules/Invoice.js'
 import { Payments } from './modules/Payments.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 
+const ColorsLog2 = [
+  "background: #d8d7d7",
+  "color: blue",
+  "display: block",
+  "font-size:14px",
+  "padding:10px",
+].join(";");
+
 console.log(`%c APP`,ColorsLog2);
 
 const anchor = document.querySelector('a');
