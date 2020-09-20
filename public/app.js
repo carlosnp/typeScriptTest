@@ -16,7 +16,7 @@ form.addEventListener('submit', (e) => {
 });
 // Clases
 console.log(`%c Clases & Modulo`, ColorsLog2);
-import { Invoice } from './modules/invoice.js';
+import { Invoice } from './modules/Invoice.js';
 const invOne = new Invoice('Devante Farrell', 'Non aut dolorem libero veritatis harum quo tempore aut.', 250);
 const invTwo = new Invoice('Kacey Hagenes I', 'Dolor odio ut suscipit qui vel.', 350);
 // console.log(invOne);
@@ -50,3 +50,15 @@ const greetPerson = (person) => {
     console.log('hola ', person.name);
 };
 greetPerson(me);
+/**
+ * Clases e interfaces
+ */
+import { Payments } from './modules/Payments.js';
+let docOne;
+let docTwo;
+docOne = new Invoice('Mrs. Levi Schinner', 'Autem et quia aspernatur.', 50);
+docTwo = new Payments('Loma Welch', 'Sapiente harum enim harum culpa ipsam.', 50);
+let docs = [];
+docs.push(docOne);
+docs.push(docTwo);
+console.log('docs', docs);

@@ -22,7 +22,7 @@ form.addEventListener('submit',(e:Event)=>{
 
 // Clases
 console.log(`%c Clases & Modulo`,ColorsLog2);
-import { Invoice } from './modules/invoice.js'
+import { Invoice } from './modules/Invoice.js'
 const invOne = new Invoice('Devante Farrell','Non aut dolorem libero veritatis harum quo tempore aut.',250)
 const invTwo = new Invoice('Kacey Hagenes I','Dolor odio ut suscipit qui vel.',350)
 
@@ -71,3 +71,22 @@ const greetPerson = (person:IsPerson)=>{
 }
 
 greetPerson(me);
+
+/**
+ * Clases e interfaces 
+ */
+import { Payments } from './modules/Payments.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
+
+let docOne: HasFormatter;
+let docTwo: HasFormatter;
+
+docOne = new Invoice('Mrs. Levi Schinner','Autem et quia aspernatur.',50);
+docTwo = new Payments('Loma Welch','Sapiente harum enim harum culpa ipsam.',50);
+
+let docs: HasFormatter[]=[];
+
+docs.push(docOne);
+docs.push(docTwo);
+
+console.log('docs', docs);
